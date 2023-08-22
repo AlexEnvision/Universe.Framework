@@ -1,0 +1,7 @@
+<project outputDir="O:\GITLABS\Universe.Framework\src\NugetPacks\Confuser\Universe.IO\BIN" baseDir="O:\GITLABS\Universe.Framework\src\Common\Universe.IO\bin\x64\Release" xmlns="http://confuser.codeplex.com">
+  <rule pattern="true" inherit="false">
+    <protection id="constants" />
+    <protection id="rename" />
+  </rule>
+  <module path="Universe.IO.dll" />
+</project>

@@ -1,0 +1,8 @@
+<project outputDir="O:\GITLABS\Universe.Framework\src\NugetPacks\Confuser\Universe.REST\BIN" baseDir="O:\GITLABS\Universe.Framework\src\Common\Universe.REST\bin\x64\Release" xmlns="http://confuser.codeplex.com">
+  <module path="Universe.REST.dll">
+    <rule pattern="true" inherit="false">
+      <protection id="constants" />
+      <protection id="rename" />
+    </rule>
+  </module>
+</project>

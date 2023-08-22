@@ -1,0 +1,9 @@
+<project outputDir="O:\GITLABS\Universe.Framework\src\NugetPacks\Confuser\Universe.Windows.Forms.Controls\BIN" baseDir="O:\GITLABS\Universe.Framework\src\Common\Universe.Windows.Forms.Controls\bin\x64\Release" xmlns="http://confuser.codeplex.com">
+  <module path="Universe.Windows.Forms.Controls.dll">
+    <rule pattern="true" inherit="false">
+      <protection id="rename" />
+      <protection id="constants" />
+    </rule>
+  </module>
+  <module path="Newtonsoft.Json.dll" />
+</project>

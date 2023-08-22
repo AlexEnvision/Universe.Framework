@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Universe.Helpers</id>
+    <version>1.0.0.0</version>
+    <authors>Alex Envision</authors>
+    <owners>Alex Envision</owners>
+    <license type="file">APACHE-2.0 LICENSE.txt</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Впомогательные методы и функции для Universe.Framework</description>
+	  <repository type="git" url="https://gitlab.com/AlexEnvision/Universe.Framework.Core" branch="master" />
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright © Alex Envision, 2019-2023</copyright>
+    <tags>Universe.Framework</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.0" />
+      <group targetFramework=".NETFramework4.5" />
+      <group targetFramework="netstandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\License\APACHE-2.0 LICENSE.txt" target="" />
+	  <!--<file src="..\Common\Universe.Helpers\bin\x64\Release\Universe.Helpers.dll" target="lib\x64" />-->
+    <file src="..\Common\Universe.Helpers\bin\Release\Universe.Helpers.dll" target="lib\net4.0" />
+    <file src="..\Common\Universe.Helpers\bin\Release\Universe.Helpers.dll" target="lib\net4.5" />
+    <file src="..\Common\Universe.Helpers\bin\Release\Universe.Helpers.dll" target="lib\netstandard2.0" />
+  </files>
+</package>

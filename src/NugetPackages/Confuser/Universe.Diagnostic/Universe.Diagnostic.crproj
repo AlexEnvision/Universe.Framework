@@ -1,0 +1,9 @@
+<project outputDir="O:\GITLABS\Universe.Framework\src\NugetPacks\Confuser\Universe.Diagnostic\BIN" baseDir="O:\GITLABS\Universe.Framework\src\Common\Universe.Diagnostic\bin\x64\Release" xmlns="http://confuser.codeplex.com">
+  <rule pattern="true" inherit="false">
+    <protection id="constants" />
+    <protection id="rename" />
+  </rule>
+  <module path="Universe.Diagnostic.dll" />
+  <module path="Universe.Helpers.dll" />
+  <module path="Universe.Types.dll" />
+</project>

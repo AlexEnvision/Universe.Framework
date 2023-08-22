@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03E28F18-9EF6-4502-9045-97A8605650B5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Universe.IO</RootNamespace>
+    <AssemblyName>Universe.IO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Universe.IO.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SolutionItems\GeneralAssemblyInfo.cs">
+      <Link>Properties\GeneralAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="CsvSerialization\CsvIgnoreAttribute.cs" />
+    <Compile Include="CsvSerialization\CsvSerializer.cs" />
+    <Compile Include="CsvSerialization\InvalidCsvFormatException.cs" />
+    <Compile Include="DownloadClient\Extensions\DownloadClientExtensions.cs" />
+    <Compile Include="DownloadClient\Extensions\PathExtensions.cs" />
+    <Compile Include="DownloadClient\Folder\FolderClient.cs" />
+    <Compile Include="DownloadClient\Folder\FolderElement.cs" />
+    <Compile Include="DownloadClient\Folder\FolderFile.cs" />
+    <Compile Include="DownloadClient\Folder\NetFolder.cs" />
+    <Compile Include="DownloadClient\Ftp\FtpClient.cs" />
+    <Compile Include="DownloadClient\Ftp\FtpElement.cs" />
+    <Compile Include="DownloadClient\Ftp\FtpFile.cs" />
+    <Compile Include="DownloadClient\Ftp\FtpFolder.cs" />
+    <Compile Include="DownloadClient\Interfaces\DownloadClientFactory.cs" />
+    <Compile Include="DownloadClient\Interfaces\FolderSettings.cs" />
+    <Compile Include="DownloadClient\Interfaces\IDownloadClient.cs" />
+    <Compile Include="DownloadClient\Interfaces\IDownloadFile.cs" />
+    <Compile Include="DownloadClient\Interfaces\IDownloadFolder.cs" />
+    <Compile Include="DownloadClient\Interfaces\IUploadFile.cs" />
+    <Compile Include="DownloadClient\Interfaces\IUploadFolder.cs" />
+    <Compile Include="DownloadClient\Upload\UploadFile.cs" />
+    <Compile Include="DownloadClient\Upload\UploadFolder.cs" />
+    <Compile Include="Extensions\XmlExtensions.cs" />
+    <Compile Include="Security\Principal\ImpersonationContext.cs" />
+    <Compile Include="Security\Principal\Impersonation\ApplyImpersonation.cs" />
+    <Compile Include="Security\Principal\Impersonation\Compatibility.cs" />
+    <Compile Include="Security\Principal\Impersonation\ImpersonationException.cs" />
+    <Compile Include="Security\Principal\Impersonation\LogonType.cs" />
+    <Compile Include="Security\Principal\Impersonation\NativeMethods.cs" />
+    <Compile Include="Security\Principal\Impersonation\UserCredentials.cs" />
+    <Compile Include="Security\Principal\RunAsAppPoolScope.cs" />
+    <Compile Include="Security\Principal\RunAsUserCredentialsScope.cs" />
+    <Compile Include="Utils\FileUtilites.cs" />
+    <Compile Include="Validators\Md5Validator.cs" />
+    <Compile Include="Validators\Sha256Validator.cs" />
+    <Compile Include="UniverseMemoryStream.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Universe.IO.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Universe.Helpers\Universe.Helpers.csproj">
+      <Project>{618328A5-4786-47F8-ABCB-B6D61FF98EF2}</Project>
+      <Name>Universe.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,26 @@
+<project outputDir="O:\GITLABS\Universe.Framework\src\NugetPacks\Confuser\Universe.Algorithm\BIN" baseDir="O:\GITLABS\Universe.Framework\src\Common\Universe.Algorithm\bin\x64\Release" xmlns="http://confuser.codeplex.com">
+  <module path="Universe.Algorithm.dll">
+    <rule pattern="true" inherit="false">
+      <protection id="rename" />
+      <protection id="constants" />
+    </rule>
+  </module>
+  <module path="Universe.Diagnostic.dll">
+    <rule pattern="true" inherit="false">
+      <protection id="rename" />
+      <protection id="constants" />
+    </rule>
+  </module>
+  <module path="Universe.Helpers.dll">
+    <rule pattern="true" inherit="false">
+      <protection id="rename" />
+      <protection id="constants" />
+    </rule>
+  </module>
+  <module path="Universe.Types.dll">
+    <rule pattern="true" inherit="false">
+      <protection id="rename" />
+      <protection id="constants" />
+    </rule>
+  </module>
+</project>

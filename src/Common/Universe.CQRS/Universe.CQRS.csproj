@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95B0CF01-29CE-4F27-8676-F5193661D109}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Universe.CQRS</RootNamespace>
+    <AssemblyName>Universe.CQRS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Universe.CQRS.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions, Version=5.11.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.Abstractions.5.11.5\lib\net45\Unity.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SolutionItems\GeneralAssemblyInfo.cs">
+      <Link>Properties\GeneralAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Dal\Base\Extensions\DataAccessExtensions.cs" />
+    <Compile Include="Dal\Base\Extensions\ExpressionExtensions.cs" />
+    <Compile Include="Dal\Base\Extensions\ExpressionVisitor.cs" />
+    <Compile Include="Dal\Base\Extensions\Helpers\EntityFrameworkEnumerableExtensions.cs" />
+    <Compile Include="Dal\Base\Extensions\Helpers\EntityFrameworkHelpers.cs" />
+    <Compile Include="Dal\Base\Extensions\Helpers\ExpressionExtensions.cs" />
+    <Compile Include="Dal\Base\Extensions\Helpers\PropertyInfoExtensions.cs" />
+    <Compile Include="Dal\Base\Extensions\Helpers\PropertyPath.cs" />
+    <Compile Include="Dal\Base\Extensions\OneParameterRebinder.cs" />
+    <Compile Include="Dal\Base\Extensions\OrderExtensions.cs" />
+    <Compile Include="Dal\Base\Extensions\QueryableMetaInfoExtensions.cs" />
+    <Compile Include="Dal\Base\Extensions\RequestedPage.cs" />
+    <Compile Include="Dal\Base\FilterBuilders\QueryableWhereBuilder.cs" />
+    <Compile Include="Dal\Base\FilterBuilders\SqlWhereBuilderBase.cs" />
+    <Compile Include="Dal\Base\MetaInfo\BaseFieldMetaInfo.cs" />
+    <Compile Include="Dal\Base\MetaInfo\BaseMetaInfo.cs" />
+    <Compile Include="Dal\Base\MetaInfo\FieldMapContainer.cs" />
+    <Compile Include="Dal\Base\MetaInfo\QueryableFieldMetaInfo.cs" />
+    <Compile Include="Dal\Base\MetaInfo\QueryableMetaInfo.cs" />
+    <Compile Include="Dal\Base\OrderAttribute.cs" />
+    <Compile Include="Dal\Base\Res\GetEntitiesDynamicRes.cs" />
+    <Compile Include="Dal\CommandQueryBuilder.cs" />
+    <Compile Include="Dal\Commands\AddEntitiesBatchCommand.cs" />
+    <Compile Include="Dal\Commands\AddEntitiesCommand.cs" />
+    <Compile Include="Dal\Commands\AddEntityCommand.cs" />
+    <Compile Include="Dal\Commands\Base\BaseCommand.cs" />
+    <Compile Include="Dal\Commands\CommandResults\AddEntitiesResult.cs" />
+    <Compile Include="Dal\Commands\CommandResults\AddEntityResult.cs" />
+    <Compile Include="Dal\Commands\CommandResults\Base\BaseCommandResult.cs" />
+    <Compile Include="Dal\Commands\CommandResults\DeleteEntityResult.cs" />
+    <Compile Include="Dal\Commands\CommandResults\UpdateEntitiesResult.cs" />
+    <Compile Include="Dal\Commands\CommandResults\UpdateEntityResult.cs" />
+    <Compile Include="Dal\Commands\DeleteEntitiesCommand.cs" />
+    <Compile Include="Dal\Commands\CommandResults\DeleteEntitiesResult.cs" />
+    <Compile Include="Dal\Commands\DeleteEntityCommand.cs" />
+    <Compile Include="Dal\Commands\UpdateEntityRbCommand.cs" />
+    <Compile Include="Dal\Commands\UpdateEntitiesBatchCommand.cs" />
+    <Compile Include="Dal\Commands\UpdateEntitiesCommand.cs" />
+    <Compile Include="Dal\Commands\UpdateEntityCommand.cs" />
+    <Compile Include="Dal\FilterMetaInfo\FilterMetaInfo.cs" />
+    <Compile Include="Dal\FilterMetaInfo\IFilterMetaInfo.cs" />
+    <Compile Include="Dal\Mappings\Extensions\MappingExpressionExtensions.cs" />
+    <Compile Include="Dal\Mappings\FilterMappings\Base\SearchFilterBaseMapping.cs" />
+    <Compile Include="Dal\Mappings\FilterMappings\FilterFieldMapping.cs" />
+    <Compile Include="Dal\Mappings\FilterMappings\SearchFilterAndMapping.cs" />
+    <Compile Include="Dal\Mappings\FilterMappings\SearchFilterBetweenRuleMapping.cs" />
+    <Compile Include="Dal\Mappings\FilterMappings\SearchFilterEqRuleMapping.cs" />
+    <Compile Include="Dal\Mappings\FilterMappings\SearchFilterInRuleMapping.cs" />
+    <Compile Include="Dal\Mappings\FilterMappings\SearchFilterIsNullRuleMapping.cs" />
+    <Compile Include="Dal\Mappings\FilterMappings\SearchFilterLikeRuleMapping.cs" />
+    <Compile Include="Dal\Mappings\FilterMappings\SearchFilterNeqRuleMapping.cs" />
+    <Compile Include="Dal\Mappings\FilterMappings\SearchFilterOrMapping.cs" />
+    <Compile Include="Dal\Mappings\FilterMappings\ValueArgumentConfiguration.cs" />
+    <Compile Include="Dal\Mappings\Framework\AutoMap.cs" />
+    <Compile Include="Dal\Mappings\Framework\IAutoMap.cs" />
+    <Compile Include="Dal\Mappings\SortingMappings\SortDescriptorMapping.cs" />
+    <Compile Include="Dal\Queries\Base\BaseQuery.cs" />
+    <Compile Include="Dal\Queries\DirectSqlQuery.cs" />
+    <Compile Include="Dal\Queries\GetEntitiesCountQuery.cs" />
+    <Compile Include="Dal\Queries\GetEntitiesQuery.cs" />
+    <Compile Include="Dal\Queries\GetEntityQuery.cs" />
+    <Compile Include="Dal\Queries\IGetEntitiesQuery.cs" />
+    <Compile Include="Dal\Queries\SelectEntitiesQuery.cs" />
+    <Compile Include="Dal\Queries\SelectEntityQuery.cs" />
+    <Compile Include="Extensions\DbQueryExtensions.cs" />
+    <Compile Include="Extensions\DbSetExtensions.cs" />
+    <Compile Include="Extensions\EntityReqHelper.cs" />
+    <Compile Include="Extensions\ExpressionExtensions.cs" />
+    <Compile Include="Extensions\FilterExtensions.cs" />
+    <Compile Include="Extensions\MetaInfoHelper.cs" />
+    <Compile Include="Extensions\PagingExtensions.cs" />
+    <Compile Include="Extensions\SortDescriptorExtensions.cs" />
+    <Compile Include="Extensions\SortingExtensions.cs" />
+    <Compile Include="Infrastructure\Diagnostic\ScopeEventLogger.cs" />
+    <Compile Include="Infrastructure\IAppPrincipalResolver.cs" />
+    <Compile Include="Infrastructure\IAppSettings.cs" />
+    <Compile Include="Infrastructure\IUniverseScope.cs" />
+    <Compile Include="Infrastructure\IPrincipalResolver.cs" />
+    <Compile Include="Infrastructure\IWebAppSettings.cs" />
+    <Compile Include="Infrastructure\IWebAppPrincipalResolver.cs" />
+    <Compile Include="Infrastructure\Json\DynamicModelMapper.cs" />
+    <Compile Include="Infrastructure\Json\UniverseModelDeserializer.cs" />
+    <Compile Include="Infrastructure\ScopeExtensions.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Infrastructure\UniverseScope.cs" />
+    <Compile Include="MapperConfiguration.cs" />
+    <Compile Include="Models\Condition\AndConfiguration.cs" />
+    <Compile Include="Models\Condition\BeetwenConfiguration.cs" />
+    <Compile Include="Models\Condition\ConditionConfiguration.cs" />
+    <Compile Include="Models\Condition\ContainsConfiguration.cs" />
+    <Compile Include="Models\Condition\EqConfiguration.cs" />
+    <Compile Include="Models\Condition\FieldArgumentConfiguration.cs" />
+    <Compile Include="Models\Condition\FieldConfiguration.cs" />
+    <Compile Include="Models\Condition\IArgumentConfiguration.cs" />
+    <Compile Include="Models\Condition\IFieldConfiguration.cs" />
+    <Compile Include="Models\Condition\InConfiguration.cs" />
+    <Compile Include="Models\Condition\IsNotNullConfiguration.cs" />
+    <Compile Include="Models\Condition\IsNullConfiguration.cs" />
+    <Compile Include="Models\Condition\MembershipConfiguration.cs" />
+    <Compile Include="Models\Condition\NeqConfiguration.cs" />
+    <Compile Include="Models\Condition\OrConfiguration.cs" />
+    <Compile Include="Models\Condition\ValueArgumentConfiguration.cs" />
+    <Compile Include="Models\Dto\Base\BaseDbEntityRequest.cs" />
+    <Compile Include="Models\Dto\Base\EntityDto.cs" />
+    <Compile Include="Models\Dto\Base\IDbEntityRequest.cs" />
+    <Compile Include="Models\Dto\Base\IEntityDto.cs" />
+    <Compile Include="Models\Dto\UserDto.cs" />
+    <Compile Include="Models\Enums\DbSystemManagementTypes.cs" />
+    <Compile Include="Models\Filter\ChainFilterTypes.cs" />
+    <Compile Include="Models\Filter\Custom\BeetwenConfiguration.cs" />
+    <Compile Include="Models\Filter\Custom\BetweenArgumentConfiguration.cs" />
+    <Compile Include="Models\Filter\Custom\DataTimePeriod.cs" />
+    <Compile Include="Models\Filter\Custom\LookupValueConfiguration.cs" />
+    <Compile Include="Models\Filter\EntityColumn.cs" />
+    <Compile Include="Models\Filter\FieldFilterType.cs" />
+    <Compile Include="Models\Filter\FieldFilterTypes.cs" />
+    <Compile Include="Models\Filter\FieldTypes.cs" />
+    <Compile Include="Models\Filter\FilterField.cs" />
+    <Compile Include="Models\Filter\FilterValue.cs" />
+    <Compile Include="Models\Filter\IFieldMapContainer.cs" />
+    <Compile Include="Models\Filter\ISearchFilter.cs" />
+    <Compile Include="Models\Filter\SearchFilterAnd.cs" />
+    <Compile Include="Models\Filter\SearchFilterBase.cs" />
+    <Compile Include="Models\Filter\SearchFilterModel.cs" />
+    <Compile Include="Models\Filter\SearchFilterOr.cs" />
+    <Compile Include="Models\Filter\SearchFilterRule.cs" />
+    <Compile Include="Models\Page\Paging.cs" />
+    <Compile Include="Models\Req\Base\IMassCreateOrUpdateReq.cs" />
+    <Compile Include="Models\Req\Base\ICreateOrUpdateReq.cs" />
+    <Compile Include="Models\Req\MassCreateOrUpdateReq.cs" />
+    <Compile Include="Models\Req\CreateOrUpdateReq.cs" />
+    <Compile Include="Models\Req\MassCreateOrUpdateReqGen.cs" />
+    <Compile Include="Models\Req\CreateOrUpdateReqGen.cs" />
+    <Compile Include="Models\Req\GetEntitiesReq.cs" />
+    <Compile Include="Models\Req\PackageGetEntitiesReq.cs" />
+    <Compile Include="Models\Res\Base\IGenEntitiesRes.cs" />
+    <Compile Include="Models\Res\GetEntitiesRes.cs" />
+    <Compile Include="Models\Res\GetEntitiesResGen.cs" />
+    <Compile Include="Models\Sort\ISortDescriptor.cs" />
+    <Compile Include="Models\Sort\SortConfiguration.cs" />
+    <Compile Include="Models\Sort\SortDescriptor.cs" />
+    <Compile Include="Models\Sort\SortDirection.cs" />
+    <Compile Include="Models\Sort\Sorting.cs" />
+    <Compile Include="Models\TableField\TableFieldConfiguration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Principal\IWebAppIdentity.cs" />
+    <Compile Include="Security\Principal\IWebAppPrincipal.cs" />
+    <Compile Include="Security\Principal\WebAppIdentity.cs" />
+    <Compile Include="Security\Principal\WebAppPrincipal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Universe.CQRS.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common.Tools\Universe.SqlBulkTools\Universe.SqlBulkTools.csproj">
+      <Project>{5cd2ee50-a2e1-4740-aee4-87e9928f0230}</Project>
+      <Name>Universe.SqlBulkTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Universe.DataAccess\Universe.DataAccess.csproj">
+      <Project>{E9B50D26-E1E7-4C1D-96E8-440CCE63107E}</Project>
+      <Name>Universe.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Universe.Diagnostic\Universe.Diagnostic.csproj">
+      <Project>{1DF5870C-30A9-45FC-A24A-1F37ACBC54CE}</Project>
+      <Name>Universe.Diagnostic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Universe.Helpers\Universe.Helpers.csproj">
+      <Project>{618328A5-4786-47F8-ABCB-B6D61FF98EF2}</Project>
+      <Name>Universe.Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Universe.Types\Universe.Types.csproj">
+      <Project>{4ca28668-64d7-4d5b-9d88-5638cc764caf}</Project>
+      <Name>Universe.Types</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

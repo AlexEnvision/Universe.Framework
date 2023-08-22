@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1A1759C-A0B2-4D71-AB9C-E6AFBD01C335}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Universe.Algorithm</RootNamespace>
+    <AssemblyName>Universe.Algorithm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Universe.Algorithm.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SolutionItems\GeneralAssemblyInfo.cs">
+      <Link>Properties\GeneralAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Abstracts\FolderBrowserAlgorithm.cs" />
+    <Compile Include="Extensions\DoubleExtensions.cs" />
+    <Compile Include="MultiThreading\MTSpeedProcessingDataWatcher.cs" />
+    <Compile Include="MultiThreading\ThreadMachine.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DateTimeAlg\IntersectingLineSegmentsAlgorithm.cs" />
+    <Compile Include="Sorting\BubbleSort.cs" />
+    <Compile Include="Sorting\CombSort.cs" />
+    <Compile Include="Sorting\InsertionSort.cs" />
+    <Compile Include="Sorting\BaseSorter.cs" />
+    <Compile Include="Sorting\BaseSortingAlgorithm.cs" />
+    <Compile Include="Sorting\QuickSort.cs" />
+    <Compile Include="Sorting\SelectionSort.cs" />
+    <Compile Include="Sorting\ShakerSort.cs" />
+    <Compile Include="Sorting\Sorter.cs" />
+    <Compile Include="Sorting\SortingAlgorithm.cs" />
+    <Compile Include="Sorting\SortingFactory.cs" />
+    <Compile Include="Sorting\SortingType.cs" />
+    <Compile Include="Tokenizer\TextTokenizer.cs" />
+    <Compile Include="Tokenizer\Tokens.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Universe.Diagnostic\Universe.Diagnostic.csproj">
+      <Project>{1DF5870C-30A9-45FC-A24A-1F37ACBC54CE}</Project>
+      <Name>Universe.Diagnostic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Universe.Helpers\Universe.Helpers.csproj">
+      <Project>{618328a5-4786-47f8-abcb-b6d61ff98ef2}</Project>
+      <Name>Universe.Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Universe.Types\Universe.Types.csproj">
+      <Project>{4CA28668-64D7-4D5B-9D88-5638CC764CAF}</Project>
+      <Name>Universe.Types</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Universe.Algorithm.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
